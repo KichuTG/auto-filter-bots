@@ -105,18 +105,18 @@ AUTO_DELETE = is_enabled('AUTO_DELETE', False)
 WELCOME = is_enabled('WELCOME', False)
 PROTECT_CONTENT = is_enabled('PROTECT_CONTENT', False)
 LONG_IMDB_DESCRIPTION = is_enabled("LONG_IMDB_DESCRIPTION", False)
-LINK_MODE = is_enabled("LINK_MODE", True)
+LINK_MODE = is_enabled("LINK_MODE", False)
 AUTO_FILTER = is_enabled('AUTO_FILTER', True)
-IMDB = is_enabled('IMDB', True)
+IMDB = is_enabled('IMDB', False)
 SPELL_CHECK = is_enabled("SPELL_CHECK", True)
 SHORTLINK = is_enabled('SHORTLINK', False)
 
 #premium info
-IS_PREMIUM = is_enabled('IS_PREMIUM', True)
-PAYMENT_QR = environ.get('PAYMENT_QR', '')
+IS_PREMIUM = is_enabled('IS_PREMIUM', False)
+PAYMENT_QR = environ.get('PAYMENT_QR', 'https://google.com')
 if len(PAYMENT_QR) == 0:
     print('Info - PAYMENT_QR is empty')
-OWNER_UPI_ID = environ.get('OWNER_UPI_ID', '')  #if you not have UPI, then use another method
+OWNER_UPI_ID = environ.get('OWNER_UPI_ID', 'ThisBoTis@Free')  #if you not have UPI, then use another method
 if len(OWNER_UPI_ID) == 0:
     print('Info - OWNER_UPI_ID is empty')
 if len(PAYMENT_QR) == 0 or len(OWNER_UPI_ID) == 0:
