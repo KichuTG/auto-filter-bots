@@ -124,14 +124,14 @@ if len(PAYMENT_QR) == 0 or len(OWNER_UPI_ID) == 0:
     IS_PREMIUM = False
 
 # for stream
-IS_STREAM = is_enabled('IS_STREAM', True)
+IS_STREAM = is_enabled('IS_STREAM', False)
 BIN_CHANNEL = environ.get("BIN_CHANNEL", "")
 if len(BIN_CHANNEL) == 0:
     print('Error - BIN_CHANNEL is missing, exiting now')
     exit()
 else:
     BIN_CHANNEL = int(BIN_CHANNEL)
-URL = environ.get("URL", "")
+URL = environ.get("URL", "https://thisbotisfree.koyeb.app")
 if len(URL) == 0:
     print('Error - URL is missing, exiting now')
     exit()
